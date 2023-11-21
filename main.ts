@@ -19,7 +19,7 @@ let countdownArray = [
 ]
 
 // nye ball drop code
-let nyeBall = sprites.create(assets.image`ballImageSmall`, SpriteKind.Player)
+let nyeBall = sprites.create(assets.image`ballImage`, SpriteKind.Player)
 nyeBall.setPosition(80,0)
 let isBallDropStarted = false
 
@@ -28,7 +28,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(isBallDropStarted)) {
         isBallDropStarted = true
         callBallDrop()
-        scene.setBackgroundImage(assets.image`backgroundImage2024`)
         music.play(music.createSong(assets.song`nyeSong`), music.PlaybackMode.InBackground)
         callFireworks()
     }
